@@ -1,6 +1,6 @@
 {
 	"name": "dcs-server",
-	"version": "1.4.7",
+	"version": "1.4.13",
 	"description": "A base express + mssql + trpc server",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",

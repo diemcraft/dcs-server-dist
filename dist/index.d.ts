@@ -167,6 +167,17 @@ export declare class SqlUtils {
 export declare class RequestUtils {
 	static extractDatatablesParams(queryObj: any): DataTableRequestQuery;
 }
+export interface ControllerRepositoryBuilderParams {
+	route: string;
+	repository: RepositoryParams;
+	mapper?: BaseMapper<any>;
+}
+export declare class ControllerRepositoryUtils {
+	static Build(params: ControllerRepositoryBuilderParams): {
+		Repository: typeof BaseRepository<any>;
+		Controller: typeof BaseController<any>;
+	};
+}
 export declare class BaseService<T> {
 	protected readonly serviceUrl = "/base-service";
 	private static _instance;
