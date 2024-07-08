@@ -198,6 +198,7 @@ export interface ServerConfig {
 	baseUrl?: string;
 	license?: string;
 	staticDirectory?: string;
+	startupMessage?: boolean;
 	onSigintEvent?: () => void;
 }
 export declare class Server {
@@ -214,7 +215,7 @@ export declare class Server {
 	private loadExpress;
 	private loadDatabase;
 	private bindSigintEvent;
-	run(): Promise<void>;
+	run(startingMessage?: string | null): Promise<void>;
 	register: {
 		controller: (controllerType: any) => void;
 		middleware: (handler: any) => void;
